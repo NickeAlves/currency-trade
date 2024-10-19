@@ -4,14 +4,14 @@
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
 
-![N](https://github.com/user-attachments/assets/2793ebb1-9fad-4a54-a9d6-fc3f854375ee)
+<img align="center" ![N](https://github.com/user-attachments/assets/2793ebb1-9fad-4a54-a9d6-fc3f854375ee)>
 
 <h2>
   Descrição <br>
 </h2>
 
 <p align="center">
-O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valores entre diferentes moedas utilizando uma API de câmbio. O programa oferece um menu interativo para o usuário selecionar a moeda de origem, a moeda de destino e o valor a ser convertido. Os resultados são apresentados ao usuário e salvos em arquivos JSON para referência futura.
+O NK Currency Trade é um aplicativo em Java que permite a conversão de valores entre diferentes moedas utilizando uma API de câmbio. O programa oferece um menu interativo para o usuário selecionar a moeda de origem, a moeda de destino e o valor a ser convertido. Os resultados são apresentados ao usuário e salvos em arquivos JSON para referência futura.
 </p>
 
 <h2>
@@ -19,9 +19,9 @@ O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valor
 </h2>
 
 <p>
-  - Conversão de valores entre várias moedas.
-  - Menu interativo para seleção de opções.
-  - Armazenamento de resultados em arquivos JSON.
+  - Conversão de valores entre várias moedas.<br>
+  - Menu interativo para seleção de opções.<br>
+  - Armazenamento de resultados em arquivos JSON.<br>
   - Tratamento de erros para entradas inválidas.
 </p>
 
@@ -31,8 +31,8 @@ O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valor
 
 <p>
   - Java
-  - Gson (para manipulação de JSON)
-  - Java HTTP Client (para requisições à API)
+  - Gson (para manipulação de JSON)<br>
+  - Java HTTP Client (para requisições à API)<br>
   - JDK 11 ou superior
 </p>
 
@@ -42,19 +42,19 @@ O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valor
 
 <p>
   com.currencytrade
-  │
-  ├── main
-  │   └── Main.java             # Classe principal do programa
-  │
-  ├── models
-  │   ├── Convert.java          # Classe que representa a conversão de moedas
-  │   └── CurrencyType.java     # Classe que representa o tipo de moeda
-  │
-  ├── services
-  │   └── ApiService.java       # Classe que lida com as requisições à API
-  │
-  └── menu
-      └── Menu.java             # Classe que contém as opções do menu <br>
+  │<br>
+  ├── main<br>
+  │   └── Main.java             # Classe principal do programa<br>
+  │<br>
+  ├── models<br>
+  │   ├── Convert.java          # Classe que representa a conversão de moedas<br>
+  │   └── CurrencyType.java     # Classe que representa o tipo de moeda<br>
+  │<br>
+  ├── services<br>
+  │   └── ApiService.java       # Classe que lida com as requisições à API<br>
+  │<br>
+  └── menu<br>
+      └── Menu.java             # Classe que contém as opções do menu <br><br>
 </p>
 
 <h2>
