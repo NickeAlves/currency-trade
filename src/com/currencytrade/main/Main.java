@@ -25,9 +25,7 @@ public class Main {
                 Convert conversionResult = currencyService.convertCurrency(currencyOption, valueConversion);
 
                 if (conversionResult != null) {
-                    System.out.println("\nO valor "
-                            + valueConversion
-                            + conversionResult);
+                    System.out.println("\nO valor "+ String.format("%.2f", valueConversion) + conversionResult);
                 } else {
                     System.out.println("Erro ao converter a moeda. Tente novamente.");
                 }

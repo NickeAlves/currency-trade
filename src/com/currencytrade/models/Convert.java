@@ -42,7 +42,7 @@ public class Convert {
                 + baseCode
                 +")"
                 + " corresponde a "
-                + conversionResult
+                + String.format("%.2f", conversionResult)
                 + " ("
                 + targetCode
                 + ").\n";
