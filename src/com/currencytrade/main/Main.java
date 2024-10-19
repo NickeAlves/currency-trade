@@ -15,6 +15,7 @@ public class Main {
 
         while (true) {
             try {
+                System.out.println("Opções de conversão:");
                 int currencyOption = currencyService.getCurrencyOption(scanner);
 
                 if (currencyOption == 7) {
