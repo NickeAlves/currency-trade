@@ -4,10 +4,10 @@
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
 
-https://github.com/user-attachments/assets/f632988c-f133-4740-a8a1-52d161bbc3cb
+https://github.com/user-attachments/assets/d29de4b8-e7f7-42d3-950f-fc2ddab762b3
 
 <h2>
-  **Descrição** <br>
+  Descrição <br>
 </h2>
 
 <p align="center">
@@ -15,7 +15,7 @@ O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valor
 </p>
 
 <h2>
-  <br>**Funcionalidades**<br>
+  <br>Funcionalidades<br>
 </h2>
 
 <p>
@@ -26,7 +26,7 @@ O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valor
 </p>
 
 <h2>
-  **Tecnologias utilizadas**<br>
+  Tecnologias utilizadas<br>
 </h2>
 
 <p>
@@ -37,7 +37,7 @@ O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valor
 </p>
 
 <h2>
-  <br>**Estrutura do projeto**<br>
+  <br>Estrutura do projeto<br>
 </h2>
 
 <p>
@@ -58,7 +58,7 @@ O *NK Currency Trade* é um aplicativo em Java que permite a conversão de valor
 </p>
 
 <h2>
-  **Como usar** <br>
+  Como usar <br>
 </h2>
 
 <p>
