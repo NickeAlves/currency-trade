@@ -12,10 +12,10 @@ import java.net.http.HttpResponse;
 public class ApiService {
     private final String baseUrl = "https://v6.exchangerate-api.com/v6/630e6bb8592dfe9f73579f8f/pair/";
 
-    public Convert fetchConversion(int conversionOption, double valueConversion) {
+    public Convert fetchConversion(int originCurrencyOption, int destinationCurrency, double valueConversion) {
         Convert conversion = new Convert();
 
-        String fullUrl = getUrl(conversionOption, valueConversion);
+        String fullUrl = getUrl(originCurrencyOption, destinationCurrency, valueConversion);
 
         try {
             HttpClient client = HttpClient.newHttpClient();
@@ -42,17 +42,27 @@ public class ApiService {
         }
     }
 
-    private String getUrl(int conversionOption, double valueConversion) {
-        String currencyPair = switch (conversionOption) {
-            case 1 -> "USD/BRL/";
-            case 2 -> "BRL/USD/";
-            case 3 -> "ARS/BRL/";
-            case 4 -> "BRL/ARS/";
-            case 5 -> "EUR/BRL/";
-            case 6 -> "BRL/EUR/";
+    private String getUrl(int originCurrencyOption, int destinationCurrency, double valueConversion) {
+        String baseCurrencyPair = switch (originCurrencyOption) {
+            case 1 -> "ARS/";
+            case 2 -> "BRL/";
+            case 3 -> "EUR/";
+            case 4 -> "USD/";
+            case 5 -> "SAR/";
+            case 6 -> "JPY/";
             default -> throw new IllegalArgumentException("Opção inválida.");
         };
 
-        return baseUrl + currencyPair + valueConversion;
+        String destinationCurrencyPair = switch (destinationCurrency) {
+            case 1 -> "ARS/";
+            case 2 -> "BRL/";
+            case 3 -> "EUR/";
+            case 4 -> "USD/";
+            case 5 -> "SAR/";
+            case 6 -> "JPY/";
+            default -> throw new IllegalArgumentException("Opção inválida.");
+        };
+
+        return baseUrl + baseCurrencyPair + destinationCurrencyPair + valueConversion;
     }
 }

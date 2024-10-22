@@ -9,14 +9,15 @@ import java.util.Scanner;
 public class CurrencyService {
     ApiService apiService = new ApiService();
 
-    public int getCurrencyOption(Scanner scanner) throws ErrorCurrencyOption {
+    public int getOriginCurrencyOption(Scanner scanner) throws ErrorCurrencyOption {
 
-        System.out.println("1) USD -> BRL\n"
-                + "2) BRL -> USD\n"
-                + "3) ARS -> BRL\n"
-                + "4) BRL -> ARS\n"
-                + "5) EUR -> BRL\n"
-                + "6) BRL -> EUR\n"
+        System.out.println("Moeda de origem:\n"
+                + "1) ARS (Argentine Peso)\n"
+                + "2) BRL (Brazilian Real)\n"
+                + "3) EUR (Euro) \n"
+                + "4) USD (United States Dollar)\n"
+                + "5) SAR (Saudi Riyal)\n"
+                + "6) JPY (Japanese Yen)\n"
                 + "7) Sair\n");
         System.out.print("Selecione a opção desejada: ");
 
@@ -29,6 +30,27 @@ public class CurrencyService {
         return option;
     }
 
+    public int getDestinationCurrency(Scanner scanner) throws ErrorCurrencyOption {
+        System.out.println("Moeda de destino:\n"
+                + "1) ARS (Argentine Peso)\n"
+                + "2) BRL (Brazilian Real)\n"
+                + "3) EUR (Euro) \n"
+                + "4) USD (United States Dollar)\n"
+                + "5) SAR (Saudi Riyal)\n"
+                + "6) JPY (Japanese Yen)\n"
+                + "7) Sair\n");
+        System.out.print("Selecione a opção desejada: ");
+
+        int option = scanner.nextInt();
+
+        if (option < 1 || option > 7) {
+            throw new ErrorCurrencyOption("Opção inválida! Escolha a opção entre 1 e 7.");
+        }
+
+        return option;
+
+    }
+
     public double getValueConversion(Scanner scanner) throws ErrorCurrencyValue {
         System.out.print("Digite o valor a ser convertido: ");
         double value = scanner.nextDouble();
@@ -39,7 +61,7 @@ public class CurrencyService {
         return value;
     }
 
-    public Convert convertCurrency(int conversionOption, double valueToConvert) {
-        return apiService.fetchConversion(conversionOption, valueToConvert);
+    public Convert convertCurrency(int originCurrencyOption, int destinationCurrency, double valueConversion) {
+        return apiService.fetchConversion(originCurrencyOption, destinationCurrency, valueConversion);
     }
 }

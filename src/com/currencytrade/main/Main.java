@@ -15,15 +15,17 @@ public class Main {
 
         while (true) {
             try {
-                System.out.println("Opções de conversão:");
-                int currencyOption = currencyService.getCurrencyOption(scanner);
+                int originCurrencyOption = currencyService.getOriginCurrencyOption(scanner);
+                int destinationCurrency = currencyService.getDestinationCurrency(scanner);
 
-                if (currencyOption == 7) {
+                if (originCurrencyOption == 7 || destinationCurrency == 7) {
                     break;
                 }
 
                 double valueConversion = currencyService.getValueConversion(scanner);
-                Convert conversionResult = currencyService.convertCurrency(currencyOption, valueConversion);
+                Convert conversionResult = currencyService.convertCurrency(originCurrencyOption
+                        , destinationCurrency
+                        , valueConversion);
 
                 if (conversionResult != null) {
                     System.out.println("\nO valor "+ String.format("%.2f", valueConversion) + conversionResult);
